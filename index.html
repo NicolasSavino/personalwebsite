@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas F. Savino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F6F1;
+            color: #4A4A4A;
+        }
+        
+        h1, button, h3 {
+            font-family: 'Lora', serif;
+            color: #2C3D2F;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .name-button {
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .name-button:hover {
+            color: #1e2920;
+        }
+        
+        .action-button {
+            background-color: transparent;
+            border: 1px solid #C1AD8B;
+            color: #4A4A4A;
+            padding: 0.75rem 2rem;
+            font-size: 1.125rem;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .action-button:hover {
+            background-color: #EAE8E2;
+            border-color: #2C3D2F;
+            color: #2C3D2F;
+        }
+
+        #details-container {
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="interactive-area" class="main-container px-4 py-8">
+        <button id="nameButton" class="name-button">Nicolas F. Savino</button>
+        
+        <!-- Initial Buttons -->
+        <div id="buttons-container" class="mt-8 flex flex-col sm:flex-row gap-4 transition-opacity duration-300">
+            <button class="action-button rounded-md">Socials</button>
+            <button class="action-button rounded-md">Tech Stuff</button>
+        </div>
+
+        <!-- Hidden Details Panel -->
+        <div id="details-container" class="hidden opacity-0 transform scale-95 max-w-4xl w-full">
+            <img src="https://placehold.co/150x150/2C3D2F/F8F6F1?text=NFS" alt="A photo of Nicolas F. Savino" class="mx-auto rounded-full w-24 h-24 sm:w-32 sm:h-32 object-cover border-4 border-white shadow-lg mb-4">
+            
+            <p class="text-gray-600 font-semibold">Fordham University (2026)</p>
+            <p class="text-gray-500 text-sm">BS in Psychology and Computer Science</p>
+            <p class="text-xs text-gray-400 mt-2 italic">Last Seen 1492 Days Ago: Minecraft</p>
+
+            <div class="text-left mt-6 border-t border-gray-200 pt-6 space-y-6">
+                <p class="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+                    Not sure how this thing works. I tend to delve into lots of different ideas and encapsulate them into a multitude of projects. Currently, I'm looking to a career in Data Science, Human-Computer Interaction, UI/UX Research, or oh, there's this really cool phenomena involving Space: lots of astronauts tend to go insane. Look up why there are locks on SpaceX's Dragon.
+                </p>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-center">Current Research</h3>
+                    <p class="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">As a part of my undergraduate research, I focus on the politicization of mental health, antisemitism, pseudoscience, OCD, and Disgust.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-center">Publication</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed italic text-center max-w-2xl mx-auto">McKay, D., Arrindell, A. S. C. T., Lustig, S. M. C., & Savino, N. F. (2025). Pathways to Trypophobia: The Role of Obsessive-Compulsive Symptoms, Anxiety, and Disgust in Disease Avoidance Following Skin Infection. Manuscript in preparation.</p>
+                </div>
+                
+                <div class="border-t border-gray-200 pt-6">
+                    <h3 class="font-bold text-lg mb-4 text-center">Languages</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 text-center text-sm">
+                        <div><span class="font-semibold block">English</span><span class="text-gray-500">Native</span></div>
+                        <div><span class="font-semibold block">Latin</span><span class="text-gray-500">Can Read/Translate</span></div>
+                        <div><span class="font-semibold block">Italian</span><span class="text-gray-500">Conversational</span></div>
+                        <div><span class="font-semibold block">Japanese</span><span class="text-gray-500">Making my way to N1</span></div>
+                        <div><span class="font-semibold block">Pig Latin</span><span class="text-gray-500">I can hold my own</span></div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 pt-6">
+                    <h3 class="font-bold text-lg mb-4 text-center">Interests & Hobbies</h3>
+                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
+                        <div>
+                            <p><strong class="text-gray-800">Piano:</strong> I've recently delved back into playing after a hiatus. I'm currently finishing up working on Prelude in C Major by Bach.</p>
+                        </div>
+                         <div>
+                            <p><strong class="text-gray-800">Chess:</strong> Suddenly became obsessed with Chess back in May. Scared to play online and have been stuck at 500 ELO.</p>
+                        </div>
+                        <div>
+                            <p><strong class="text-gray-800">Weightlifting:</strong> Been in the Gym for 2+ Years.</p>
+                        </div>
+                        <div>
+                            <p><strong class="text-gray-800">Nature:</strong> I occassionally like to touch grass. Sunsets are my favorite thing ever created.</p>
+                        </div>
+                         <div>
+                            <p><strong class="text-gray-800">Space:</strong> I dabble in some scientific research on the growing field of astronomy in my free time.</p>
+                        </div>
+                        <div>
+                            <p><strong class="text-gray-800">Books:</strong> Currently reading the Book of Five Rings by Miyamoto Mushashi. I'd recommend reading Meditations by Marcus Aurelius or Regretting You by Colleen Hoover.</p>
+                        </div>
+                         <div class="md:col-span-2">
+                            <p><strong class="text-gray-800">Writing:</strong> I started this page to give a blog. I like to overthink, so it's best to put these thoughts to words.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const interactiveArea = document.getElementById('interactive-area');
+        const buttonsContainer = document.getElementById('buttons-container');
+        const detailsContainer = document.getElementById('details-container');
+
+        interactiveArea.addEventListener('mouseenter', () => {
+            buttonsContainer.classList.add('opacity-0');
+            buttonsContainer.classList.add('hidden');
+            
+            detailsContainer.classList.remove('hidden');
+            setTimeout(() => {
+                detailsContainer.classList.remove('opacity-0', 'scale-95');
+            }, 10);
+        });
+
+        interactiveArea.addEventListener('mouseleave', () => {
+            detailsContainer.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => {
+                detailsContainer.classList.add('hidden');
+                buttonsContainer.classList.remove('hidden');
+                buttonsContainer.classList.remove('opacity-0');
+            }, 300); 
+        });
+    </script>
+
+</body>
+</html>
+
