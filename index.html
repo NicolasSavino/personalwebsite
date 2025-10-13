@@ -3,168 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolas F. Savino</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8F6F1;
-            color: #4A4A4A;
-        }
-        
-        h1, button, h3 {
-            font-family: 'Lora', serif;
-            color: #2C3D2F;
-        }
-
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        .name-button {
-            background: none;
-            border: none;
-            padding: 0;
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 700;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        .name-button:hover {
-            color: #1e2920;
-        }
-        
-        .action-button {
-            background-color: transparent;
-            border: 1px solid #C1AD8B;
-            color: #4A4A4A;
-            padding: 0.75rem 2rem;
-            font-size: 1.125rem;
-            font-family: 'Inter', sans-serif;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .action-button:hover {
-            background-color: #EAE8E2;
-            border-color: #2C3D2F;
-            color: #2C3D2F;
-        }
-
-        #details-container {
-            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul class="nav-menu">
+            <li><a href="#about" class="nav-link">About Me</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#research" class="nav-link">Research</a></li>
+            <li><a href="#socials" class="nav-link">Socials</a></li>
+        </ul>
+    </nav>
 
-    <div id="interactive-area" class="main-container px-4 py-8">
-        <button id="nameButton" class="name-button">Nicolas F. Savino</button>
-        
-        <!-- Initial Buttons -->
-        <div id="buttons-container" class="mt-8 flex flex-col sm:flex-row gap-4 transition-opacity duration-300">
-            <button class="action-button rounded-md">Socials</button>
-            <button class="action-button rounded-md">Tech Stuff</button>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <blockquote class="hero-quote fade-in">
+                "You have power over your mind, not outside events. Realize this, and you will find strength."
+                <cite>— Marcus Aurelius</cite>
+            </blockquote>
+            <a href="#about" class="hero-button">About Me</a>
         </div>
+    </section>
 
-        <!-- Hidden Details Panel -->
-        <div id="details-container" class="hidden opacity-0 transform scale-95 max-w-4xl w-full">
-            <img src="https://placehold.co/150x150/2C3D2F/F8F6F1?text=NFS" alt="A photo of Nicolas F. Savino" class="mx-auto rounded-full w-24 h-24 sm:w-32 sm:h-32 object-cover border-4 border-white shadow-lg mb-4">
-            
-            <p class="text-gray-600 font-semibold">Fordham University (2026)</p>
-            <p class="text-gray-500 text-sm">BS in Psychology and Computer Science</p>
-            <p class="text-xs text-gray-400 mt-2 italic">Last Seen 1492 Days Ago: Minecraft</p>
-
-            <div class="text-left mt-6 border-t border-gray-200 pt-6 space-y-6">
-                <p class="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-                    Not sure how this thing works. I tend to delve into lots of different ideas and encapsulate them into a multitude of projects. Currently, I'm looking to a career in Data Science, Human-Computer Interaction, UI/UX Research, or oh, there's this really cool phenomena involving Space: lots of astronauts tend to go insane. Look up why there are locks on SpaceX's Dragon.
-                </p>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-2 text-center">Current Research</h3>
-                    <p class="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">As a part of my undergraduate research, I focus on the politicization of mental health, antisemitism, pseudoscience, OCD, and Disgust.</p>
+    <!-- About Me Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-container">
+                    <img src="nicolassavinophoto.jpg" alt="Nicolas Savino" class="about-image">
                 </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-2 text-center">Publication</h3>
-                    <p class="text-gray-700 text-sm leading-relaxed italic text-center max-w-2xl mx-auto">McKay, D., Arrindell, A. S. C. T., Lustig, S. M. C., & Savino, N. F. (2025). Pathways to Trypophobia: The Role of Obsessive-Compulsive Symptoms, Anxiety, and Disgust in Disease Avoidance Following Skin Infection. Manuscript in preparation.</p>
+                <div class="about-text-container">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-education">Fordham University: Class of 2026, BS in Psychology/Computer Science.</p>
+                    <p class="about-intro">Felicitations malefactors. I'm someone who is captivated by the beauty of the ordinary and extraordinary. I often like to spend my time accomplishing goals and finding meaning in my life. Whether it be doing research, writing, programming, or taking a stroll in nature, I aim to make the most out of the time I have on this earth.</p>
+                    <p class="about-hobbies"><strong>Hobbies:</strong> Reading, Writing, Chess, Piano, Working Out, and Spending My Free Time watching the sun fall from the sky.</p>
+                    <p class="about-current">As we speak, I'm actively applying for graduate programs, writing a book, and working on a startup with my Co-Founder (news about it soon!)</p>
                 </div>
-                
-                <div class="border-t border-gray-200 pt-6">
-                    <h3 class="font-bold text-lg mb-4 text-center">Languages</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 text-center text-sm">
-                        <div><span class="font-semibold block">English</span><span class="text-gray-500">Native</span></div>
-                        <div><span class="font-semibold block">Latin</span><span class="text-gray-500">Can Read/Translate</span></div>
-                        <div><span class="font-semibold block">Italian</span><span class="text-gray-500">Conversational</span></div>
-                        <div><span class="font-semibold block">Japanese</span><span class="text-gray-500">Making my way to N1</span></div>
-                        <div><span class="font-semibold block">Pig Latin</span><span class="text-gray-500">I can hold my own</span></div>
-                    </div>
-                </div>
-
-                <div class="border-t border-gray-200 pt-6">
-                    <h3 class="font-bold text-lg mb-4 text-center">Interests & Hobbies</h3>
-                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
-                        <div>
-                            <p><strong class="text-gray-800">Piano:</strong> I've recently delved back into playing after a hiatus. I'm currently finishing up working on Prelude in C Major by Bach.</p>
-                        </div>
-                         <div>
-                            <p><strong class="text-gray-800">Chess:</strong> Suddenly became obsessed with Chess back in May. Scared to play online and have been stuck at 500 ELO.</p>
-                        </div>
-                        <div>
-                            <p><strong class="text-gray-800">Weightlifting:</strong> Been in the Gym for 2+ Years.</p>
-                        </div>
-                        <div>
-                            <p><strong class="text-gray-800">Nature:</strong> I occassionally like to touch grass. Sunsets are my favorite thing ever created.</p>
-                        </div>
-                         <div>
-                            <p><strong class="text-gray-800">Space:</strong> I dabble in some scientific research on the growing field of astronomy in my free time.</p>
-                        </div>
-                        <div>
-                            <p><strong class="text-gray-800">Books:</strong> Currently reading the Book of Five Rings by Miyamoto Mushashi. I'd recommend reading Meditations by Marcus Aurelius or Regretting You by Colleen Hoover.</p>
-                        </div>
-                         <div class="md:col-span-2">
-                            <p><strong class="text-gray-800">Writing:</strong> I started this page to give a blog. I like to overthink, so it's best to put these thoughts to words.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        const interactiveArea = document.getElementById('interactive-area');
-        const buttonsContainer = document.getElementById('buttons-container');
-        const detailsContainer = document.getElementById('details-container');
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <!-- Languages -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title">Languages</h3>
+                    <ul class="skill-list">
+                        <li>English <span class="skill-level">(Native)</span></li>
+                        <li>Italian <span class="skill-level">(Limited-Working Proficiency)</span></li>
+                        <li>Latin <span class="skill-level">(Read/Translate)</span></li>
+                        <li>Japanese <span class="skill-level">(Beginner)</span></li>
+                        <li>Pig Latin <span class="skill-level">(Native)</span></li>
+                    </ul>
+                </div>
 
-        interactiveArea.addEventListener('mouseenter', () => {
-            buttonsContainer.classList.add('opacity-0');
-            buttonsContainer.classList.add('hidden');
-            
-            detailsContainer.classList.remove('hidden');
-            setTimeout(() => {
-                detailsContainer.classList.remove('opacity-0', 'scale-95');
-            }, 10);
-        });
+                <!-- Front-End -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title">Front-End</h3>
+                    <ul class="skill-list">
+                        <li>React</li>
+                        <li>React Native</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
 
-        interactiveArea.addEventListener('mouseleave', () => {
-            detailsContainer.classList.add('opacity-0', 'scale-95');
-            setTimeout(() => {
-                detailsContainer.classList.add('hidden');
-                buttonsContainer.classList.remove('hidden');
-                buttonsContainer.classList.remove('opacity-0');
-            }, 300); 
-        });
-    </script>
+                <!-- Back-End -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title">Back-End</h3>
+                    <ul class="skill-list">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>FastAPI</li>
+                    </ul>
+                </div>
 
+                <!-- Data/Research -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title">Data/Research</h3>
+                    <ul class="skill-list">
+                        <li>R</li>
+                        <li>Python</li>
+                        <li>SPSS</li>
+                        <li>Rust</li>
+                        <li>SQL</li>
+                        <li>Excel <span class="skill-level">(Certified)</span></li>
+                        <li>MATLAB</li>
+                        <li>Qualtrics</li>
+                    </ul>
+                </div>
+
+                <!-- AI & APIs -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title">AI & APIs</h3>
+                    <ul class="skill-list">
+                        <li>OpenAI GPT API</li>
+                        <li>Prompt Engineering</li>
+                        <li>Stripe API</li>
+                    </ul>
+                </div>
+
+                <!-- Design -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title">Design</h3>
+                    <ul class="skill-list">
+                        <li>Figma</li>
+                        <li>Canva</li>
+                        <li>CapCut</li>
+                        <li>Adobe Premiere Pro</li>
+                    </ul>
+                </div>
+
+                <!-- Business -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title">Business</h3>
+                    <ul class="skill-list">
+                        <li>Salesforce</li>
+                        <li>Excel</li>
+                        <li>PowerPoint</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p>Content coming soon...</p>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section" id="research">
+        <div class="container">
+            <h2 class="section-title">Research</h2>
+
+            <!-- Research Interests -->
+            <div class="research-interests">
+                <div class="interests-card">
+                    <h3 class="interests-title">My Research Interests</h3>
+                    <p class="interests-list">Isolation in Space, OCD, Anxiety, and Neurobiological Factors of Psychopathology</p>
+                </div>
+                <div class="interests-card">
+                    <h3 class="interests-title">My Current Research</h3>
+                    <p class="interests-list">Disgust, Politicization of Mental Health Practices, Antisemitism, and Pseudoscience</p>
+                </div>
+            </div>
+
+            <!-- Current Research Position -->
+            <div class="research-block">
+                <div class="research-header">
+                    <h3 class="research-position">COAP Lab (Compulsive, Obsessive, Anxiety Program) - Lab Assistant</h3>
+                    <p class="research-meta">Fordham University | February 2025-Present</p>
+                    <p class="research-meta">Director: Dr. Dean McKay, PhD</p>
+                </div>
+
+                <div class="research-content">
+                    <h4 class="research-subtitle">Responsibilities:</h4>
+                    <ul class="research-list">
+                        <li>Assist in experimental design, data collection, and analysis of the politicization of mental health/medical health professions (specifically the alarming occurrence of antisemitism)</li>
+                        <li>Utilize software for data processing and statistical analysis (e.g., MATLAB, R, SPSS)</li>
+                        <li>Collaborate with faculty and graduate researchers on projects related to antisemitism, pseudo-scientific methods, and disgust</li>
+                        <li>Contribute to academic presentations, literature reviews, and manuscript preparation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- COAP Lab Projects -->
+            <div class="research-section-header">
+                <h3>COAP Lab Projects</h3>
+            </div>
+
+            <div class="research-projects-grid">
+                <!-- Project 1 -->
+                <div class="research-project-card accordion-card">
+                    <div class="accordion-header">
+                        <div class="accordion-title-wrapper">
+                            <h4 class="project-title">Project 1: Anxiety Disorder Book</h4>
+                            <p class="project-meta">2025-Present | Mentored Under: Dr. Dean McKay, PhD</p>
+                            <p class="project-meta">Fordham University</p>
+                        </div>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+
+                    <div class="accordion-content">
+                        <h5 class="project-subtitle">Responsibilities:</h5>
+                        <ul class="project-list">
+                            <li>Conducting a comprehensive literature synthesis of contemporary psychopathology research (2002-present) to inform a forthcoming scholarly textbook poised to become a new standard in the field</li>
+                            <li>Structuring empirical findings thematically to build nuanced arguments, integrating both dominant perspectives and critical counterpoints across multiple chapters</li>
+                            <li>Collaborating directly with senior authors, gaining in-depth exposure to the academic editorial process, publishing standards, and advanced clinical theory</li>
+                            <li>Responsible for the following chapters: Features of anxiety (2) and Central neurobiology of anxiety (7)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="research-project-card accordion-card">
+                    <div class="accordion-header">
+                        <div class="accordion-title-wrapper">
+                            <h4 class="project-title">Project 2: Politics in Mental Health Professions</h4>
+                            <p class="project-meta">2025-Present | Mentored by: Dr. Dean McKay, PhD, and Katie Muschalik</p>
+                            <p class="project-meta">Fordham University</p>
+                        </div>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+
+                    <div class="accordion-content">
+                        <h5 class="project-subtitle">Responsibilities:</h5>
+                        <ul class="project-list">
+                            <li>Created and deployed a survey surrounding the politicization of mental health, particularly focusing on the ongoing rhetoric surrounding the prevalence of political polarization and antisemitism in the field</li>
+                            <li>Collected responses from trusted clinicians and social workers, and used R to create a data analysis to systematically organize responses</li>
+                            <li>Survey responses indicated strong levels of ongoing antisemitism and political disputes in the mental health field</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="research-project-card accordion-card">
+                    <div class="accordion-header">
+                        <div class="accordion-title-wrapper">
+                            <h4 class="project-title">Project 3: Analysis of State-Level Continuing Education for Psychologists</h4>
+                            <p class="project-meta">2025-Present | Mentored Under: Dr. Dean McKay, PhD</p>
+                            <p class="project-meta">In Collaboration with: Aerin Ellard (2026) | Fordham University</p>
+                        </div>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+
+                    <div class="accordion-content">
+                        <h5 class="project-subtitle">Responsibilities:</h5>
+                        <ul class="project-list">
+                            <li>Investigating state-approved, non-APA continuing education (CE) providers to assess the scientific validity of their training materials for licensed psychologists</li>
+                            <li>Analyzing course offerings on therapeutic interventions and comparing them against established, evidence-based psychological treatments</li>
+                            <li>Contributing to a policy-oriented project aimed at ensuring public protection and upholding scientific standards in professional mental health training</li>
+                            <li>Currently focusing on densely-populated states such as NY, NJ, CA, and TX</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publications -->
+            <div class="research-block">
+                <div class="research-header">
+                    <h3 class="research-position">Publications</h3>
+                </div>
+
+                <div class="research-content">
+                    <p class="publication-entry">McKay, D., Arrindell, A. S. C. T., Lustig, S. M. C., & Savino, N. F. (2025). Pathways to Trypophobia: The Role of Obsessive-Compulsive Symptoms, Anxiety, and Disgust in Disease Avoidance Following Skin Infection. <em>Manuscript in preparation.</em></p>
+                </div>
+            </div>
+
+            <!-- Previous Research Experience -->
+            <div class="research-section-header">
+                <h3>Previous Research Experience</h3>
+            </div>
+
+            <div class="research-block">
+                <div class="research-header">
+                    <h3 class="research-position">Bronx Personality Lab (B-PER) - Research Assistant</h3>
+                    <p class="research-meta">2024-2025 | Director: Dr. Christopher Conway, PhD</p>
+                    <p class="research-meta">Fordham University</p>
+                </div>
+
+                <div class="research-content">
+                    <h4 class="research-subtitle">Responsibilities:</h4>
+                    <ul class="research-list">
+                        <li>Executed a bibliometric analysis of the McLean Study of Adult Development (MSAD) and the Collaborative Longitudinal Personality Disorders Study (CLPS), two seminal longitudinal studies on Borderline Personality Disorder (BPD)</li>
+                        <li>Analyzed citation trends and keyword frequencies to map the conceptual evolution of BPD diagnostics, symptomatology, and treatment approaches in scholarly literature</li>
+                        <li>Worked directly on papers expanding the literature surrounding Borderline Personality Disorder with graduate assistants</li>
+                        <li>Developed statistical models in conjunction of the word associations affiliated with BPD, as well as other personality disorders</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Independent Research -->
+            <div class="research-section-header">
+                <h3>Independent Research & Papers</h3>
+            </div>
+
+            <div class="research-projects-grid">
+                <!-- Study 1 -->
+                <div class="research-project-card accordion-card">
+                    <div class="accordion-header">
+                        <div class="accordion-title-wrapper">
+                            <h4 class="project-title">Study 1: Omission Neglect</h4>
+                            <p class="project-meta">January-April 2025 | Principal Investigator</p>
+                            <p class="project-meta">Bronx, NY</p>
+                        </div>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+
+                    <div class="accordion-content">
+                        <h5 class="project-subtitle">Information:</h5>
+                        <ul class="project-list">
+                            <li>Spearheaded an independent experimental study examining omission neglect, a cognitive bias where missing information distorts ethical decision-making</li>
+                            <li>Engineered and deployed a Qualtrics-based methodology to test hypotheses, analyzing all data with independent-sample t-tests and effect-size calculations in IBM SPSS</li>
+                            <li>Revealed meaningful psychological patterns, discovering large effect sizes that suggest omission neglect contributes to overconfidence in ambiguous situations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Study 2 -->
+                <div class="research-project-card accordion-card">
+                    <div class="accordion-header">
+                        <div class="accordion-title-wrapper">
+                            <h4 class="project-title">Study 2: Clinical Analysis of Pediatric Obsessive-Compulsive Disorder (OCD)</h4>
+                            <p class="project-meta">January-April 2025 | Principal Investigator</p>
+                            <p class="project-meta">Bronx, NY</p>
+                        </div>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+
+                    <div class="accordion-content">
+                        <h5 class="project-subtitle">Information:</h5>
+                        <ul class="project-list">
+                            <li>Conducted a literature synthesis of peer-reviewed studies to analyze the distinct presentation of pediatric OCD compared to adult-onset OCD</li>
+                            <li>Evaluated key differences across symptoms, common comorbidities, and the efficacy of evidence-based treatments (CBT, SSRIs)</li>
+                            <li>Investigated the influence of family dynamics, cultural context, and socioeconomic factors on diagnosis and treatment outcomes</li>
+                            <li>Identified early diagnosis and parent-focused therapy as critical factors for improving long-term outcomes in youth mental health</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Socials Section -->
+    <section class="section" id="socials">
+        <div class="container">
+            <h2 class="section-title">Socials</h2>
+
+            <div class="socials-grid">
+                <!-- Left Side - Social Icons -->
+                <div class="socials-icons">
+                    <a href="https://github.com/NicolasSavino" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span class="social-label">GitHub</span>
+                    </a>
+
+                    <a href="https://www.youtube.com/@nikolaivonchenkloff" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        </svg>
+                        <span class="social-label">YouTube</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/nicolas-f-savino-6887182a9/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                        </svg>
+                        <span class="social-label">LinkedIn</span>
+                    </a>
+
+                    <a href="https://share.streamlit.io/user/nicolassavino" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                        </svg>
+                        <span class="social-label">Streamlit</span>
+                    </a>
+                </div>
+
+                <!-- Right Side - Blog Announcement -->
+                <div class="blog-announcement">
+                    <p class="blog-text">My New Blog is Live! Please Feel Free to Check Out My Writings:</p>
+                    <a href="https://substack.com/@nicolasfsavino" target="_blank" rel="noopener noreferrer" class="blog-button">BLOG</a>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+                <h3 class="contact-title">Feel Free to Contact Me</h3>
+                <div class="contact-emails">
+                    <a href="mailto:nsavino5@fordham.edu" class="email-link">nsavino5@fordham.edu</a>
+                    <a href="mailto:nicolassavino3@gmail.com" class="email-link">nicolassavino3@gmail.com</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
