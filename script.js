@@ -84,12 +84,19 @@ if (aboutGrid) {
     fadeInObserver.observe(aboutGrid);
 }
 
-// Observe skill cards for staggered fade-in animation
-const skillCards = document.querySelectorAll('.skill-card');
-skillCards.forEach((card, index) => {
+// Observe skill accordion cards for staggered fade-in animation
+const skillAccordionCards = document.querySelectorAll('.skill-accordion-card');
+skillAccordionCards.forEach((card, index) => {
     // Add staggered delay for each card
-    card.style.transitionDelay = `${index * 0.1}s`;
+    card.style.transitionDelay = `${index * 0.15}s`;
     fadeInObserver.observe(card);
+});
+
+// Observe project logo items for staggered fade-in animation
+const projectLogoItems = document.querySelectorAll('.project-logo-item');
+projectLogoItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 0.15}s`;
+    fadeInObserver.observe(item);
 });
 
 // Observe research interests cards for fade-in animation
@@ -179,6 +186,66 @@ accordionCards.forEach(card => {
 
 window.addEventListener('load', () => {
     updateActiveLink();
+});
+
+// ===================================
+// Projects Click-to-Reveal Functionality
+// ===================================
+
+const projectLogoItemsClick = document.querySelectorAll('.project-logo-item');
+const projectDetailsPanel = document.getElementById('projectDetailsPanel');
+const closeProjectDetailsBtn = document.getElementById('closeProjectDetails');
+
+projectLogoItemsClick.forEach(item => {
+    item.addEventListener('click', () => {
+        const projectId = item.getAttribute('data-project');
+
+        // Remove active class from all logo items
+        projectLogoItemsClick.forEach(i => i.classList.remove('active'));
+
+        // Add active class to clicked item
+        item.classList.add('active');
+
+        // Hide all project details content
+        const allProjectContent = document.querySelectorAll('.project-details-content');
+        allProjectContent.forEach(content => content.classList.remove('active'));
+
+        // Show the selected project details
+        const selectedContent = document.querySelector(`[data-project-content="${projectId}"]`);
+        if (selectedContent) {
+            selectedContent.classList.add('active');
+        }
+
+        // Show the details panel
+        projectDetailsPanel.classList.add('active');
+
+        // Smooth scroll to details panel
+        setTimeout(() => {
+            projectDetailsPanel.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }, 100);
+    });
+});
+
+// Close button functionality
+closeProjectDetailsBtn.addEventListener('click', () => {
+    projectDetailsPanel.classList.remove('active');
+
+    // Remove active class from all logo items
+    projectLogoItemsClick.forEach(i => i.classList.remove('active'));
+
+    // Hide all project details content
+    const allProjectContent = document.querySelectorAll('.project-details-content');
+    allProjectContent.forEach(content => content.classList.remove('active'));
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && projectDetailsPanel.classList.contains('active')) {
+        closeProjectDetailsBtn.click();
+    }
 });
 
 // ===================================

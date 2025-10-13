@@ -24,6 +24,19 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-overlay"></div>
+
+        <!-- Snowflakes -->
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+
         <div class="hero-content">
             <blockquote class="hero-quote fade-in">
                 "You have power over your mind, not outside events. Realize this, and you will find strength."
@@ -55,86 +68,114 @@
     <section class="section section-alt" id="skills">
         <div class="container">
             <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <!-- Languages -->
-                <div class="skill-card">
-                    <h3 class="skill-card-title">Languages</h3>
-                    <ul class="skill-list">
-                        <li>English <span class="skill-level">(Native)</span></li>
-                        <li>Italian <span class="skill-level">(Limited-Working Proficiency)</span></li>
-                        <li>Latin <span class="skill-level">(Read/Translate)</span></li>
-                        <li>Japanese <span class="skill-level">(Beginner)</span></li>
-                        <li>Pig Latin <span class="skill-level">(Native)</span></li>
-                    </ul>
+            <div class="skills-accordion-container">
+
+                <!-- Languages Dropdown -->
+                <div class="skill-accordion-card accordion-card">
+                    <div class="accordion-header">
+                        <div class="accordion-title-wrapper">
+                            <h3 class="skill-accordion-title">Languages</h3>
+                        </div>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="skill-list">
+                            <li>English <span class="skill-level">(Native)</span></li>
+                            <li>Italian <span class="skill-level">(Limited-Working Proficiency)</span></li>
+                            <li>Latin <span class="skill-level">(Read/Translate)</span></li>
+                            <li>Japanese <span class="skill-level">(Beginner)</span></li>
+                            <li>Pig Latin <span class="skill-level">(Native)</span></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Front-End -->
-                <div class="skill-card">
-                    <h3 class="skill-card-title">Front-End</h3>
-                    <ul class="skill-list">
-                        <li>React</li>
-                        <li>React Native</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
+                <!-- Technical Skills Dropdown -->
+                <div class="skill-accordion-card accordion-card">
+                    <div class="accordion-header">
+                        <div class="accordion-title-wrapper">
+                            <h3 class="skill-accordion-title">Technical Skills</h3>
+                        </div>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="skill-subsection">
+                            <h4 class="skill-subsection-title">Front-End</h4>
+                            <ul class="skill-list">
+                                <li>React</li>
+                                <li>React Native</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                        <div class="skill-subsection">
+                            <h4 class="skill-subsection-title">Back-End</h4>
+                            <ul class="skill-list">
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>FastAPI</li>
+                            </ul>
+                        </div>
+                        <div class="skill-subsection">
+                            <h4 class="skill-subsection-title">AI & APIs</h4>
+                            <ul class="skill-list">
+                                <li>OpenAI GPT API</li>
+                                <li>Prompt Engineering</li>
+                                <li>Stripe API</li>
+                            </ul>
+                        </div>
+                        <div class="skill-subsection">
+                            <h4 class="skill-subsection-title">Design</h4>
+                            <ul class="skill-list">
+                                <li>Figma</li>
+                                <li>Canva</li>
+                                <li>CapCut</li>
+                                <li>Adobe Premiere Pro</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Back-End -->
-                <div class="skill-card">
-                    <h3 class="skill-card-title">Back-End</h3>
-                    <ul class="skill-list">
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>FastAPI</li>
-                    </ul>
+                <!-- Research & Analytics Dropdown -->
+                <div class="skill-accordion-card accordion-card">
+                    <div class="accordion-header">
+                        <div class="accordion-title-wrapper">
+                            <h3 class="skill-accordion-title">Research & Analytics</h3>
+                        </div>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="skill-subsection">
+                            <h4 class="skill-subsection-title">Data Analysis</h4>
+                            <ul class="skill-list">
+                                <li>R</li>
+                                <li>Python</li>
+                                <li>SPSS</li>
+                                <li>Rust</li>
+                                <li>SQL</li>
+                                <li>Excel <span class="skill-level">(Certified)</span></li>
+                                <li>MATLAB</li>
+                            </ul>
+                        </div>
+                        <div class="skill-subsection">
+                            <h4 class="skill-subsection-title">Research Tools</h4>
+                            <ul class="skill-list">
+                                <li>Qualtrics</li>
+                                <li>SPSS</li>
+                                <li>MATLAB</li>
+                            </ul>
+                        </div>
+                        <div class="skill-subsection">
+                            <h4 class="skill-subsection-title">Business Analytics</h4>
+                            <ul class="skill-list">
+                                <li>Salesforce</li>
+                                <li>Excel</li>
+                                <li>PowerPoint</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Data/Research -->
-                <div class="skill-card">
-                    <h3 class="skill-card-title">Data/Research</h3>
-                    <ul class="skill-list">
-                        <li>R</li>
-                        <li>Python</li>
-                        <li>SPSS</li>
-                        <li>Rust</li>
-                        <li>SQL</li>
-                        <li>Excel <span class="skill-level">(Certified)</span></li>
-                        <li>MATLAB</li>
-                        <li>Qualtrics</li>
-                    </ul>
-                </div>
-
-                <!-- AI & APIs -->
-                <div class="skill-card">
-                    <h3 class="skill-card-title">AI & APIs</h3>
-                    <ul class="skill-list">
-                        <li>OpenAI GPT API</li>
-                        <li>Prompt Engineering</li>
-                        <li>Stripe API</li>
-                    </ul>
-                </div>
-
-                <!-- Design -->
-                <div class="skill-card">
-                    <h3 class="skill-card-title">Design</h3>
-                    <ul class="skill-list">
-                        <li>Figma</li>
-                        <li>Canva</li>
-                        <li>CapCut</li>
-                        <li>Adobe Premiere Pro</li>
-                    </ul>
-                </div>
-
-                <!-- Business -->
-                <div class="skill-card">
-                    <h3 class="skill-card-title">Business</h3>
-                    <ul class="skill-list">
-                        <li>Salesforce</li>
-                        <li>Excel</li>
-                        <li>PowerPoint</li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
@@ -143,7 +184,79 @@
     <section class="section" id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
-            <p>Content coming soon...</p>
+
+            <!-- Project Logos Grid -->
+            <div class="projects-logo-grid">
+
+                <!-- Project 1: Over Coffee AI -->
+                <div class="project-logo-item" data-project="overcoffee">
+                    <div class="project-logo-container">
+                        <img src="overcoffeelogo.jpg" alt="Over Coffee AI" class="project-logo-image">
+                    </div>
+                </div>
+
+                <!-- Project 2: Solar -->
+                <div class="project-logo-item" data-project="solar">
+                    <div class="project-logo-container">
+                        <svg class="project-logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21.5 9l-2.25-2.25L21 5l-1.75-1.75L17.5 5l-2.25-2.25L14 4l1.25 1.25L12 9.5l3.25 3.25L17.5 11l2.25 2.25L21 11.5l-1.75 1.75L21.5 15V9zM5 3L3 5l2 2h2l2-2-2-2H5zm7 4.5L8.75 11 5.5 7.75 3.25 10 6.5 13.25 3 16.75 2 18l1.25 1L5.75 17l3.25 3.5L12 17.25 14.25 20l3.25-3.5L15 13.75l3.25-3.5-2.25-2.25L12 11.5V7.5z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project 3: ParallelAI -->
+                <div class="project-logo-item" data-project="parallel">
+                    <div class="project-logo-container">
+                        <svg class="project-logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project 4: SLL -->
+                <div class="project-logo-item" data-project="sll">
+                    <div class="project-logo-container">
+                        <svg class="project-logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Project Details Panel -->
+            <div class="project-details-panel" id="projectDetailsPanel">
+                <button class="project-close-btn" id="closeProjectDetails" aria-label="Close details">×</button>
+
+                <!-- Over Coffee AI Details -->
+                <div class="project-details-content" data-project-content="overcoffee">
+                    <h3 class="project-details-title">Over Coffee AI</h3>
+                    <p class="project-details-description">An AI-driven mental reflection tool aimed at helping one find their purpose in life. Amassed over 100+ users within 48 hours of launch.</p>
+                    <a href="https://overcoffee.ai" target="_blank" rel="noopener noreferrer" class="project-details-button">Visit Site</a>
+                </div>
+
+                <!-- Solar Details -->
+                <div class="project-details-content" data-project-content="solar">
+                    <h3 class="project-details-title">Solar</h3>
+                    <span class="project-tag">Coming Soon</span>
+                    <p class="project-details-description">The future killer of LinkedIn. Stay tuned for updates!</p>
+                </div>
+
+                <!-- ParallelAI Details -->
+                <div class="project-details-content" data-project-content="parallel">
+                    <h3 class="project-details-title">ParallelAI</h3>
+                    <span class="project-tag">In Development</span>
+                    <p class="project-details-description">A dating app with no swiping or scrolling. The AI learns about you and delivers daily curated matches with short chemistry blurbs, then you jump straight into conversation.</p>
+                </div>
+
+                <!-- SLL Details -->
+                <div class="project-details-content" data-project-content="sll">
+                    <h3 class="project-details-title">SLL</h3>
+                    <span class="project-tag">Coming Soon</span>
+                    <p class="project-details-description">An upcoming e-book. Information will be revealed at a later date!</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -348,50 +461,47 @@
             <h2 class="section-title">Socials</h2>
 
             <div class="socials-grid">
-                <!-- Left Side - Social Icons -->
+                <!-- Left Side - Social Icons Only -->
                 <div class="socials-icons">
-                    <a href="https://github.com/NicolasSavino" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://github.com/NicolasSavino" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
                         <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
-                        <span class="social-label">GitHub</span>
                     </a>
 
-                    <a href="https://www.youtube.com/@nikolaivonchenkloff" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://www.youtube.com/@nikolaivonchenkloff" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
                         <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
                         </svg>
-                        <span class="social-label">YouTube</span>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/nicolas-f-savino-6887182a9/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://www.linkedin.com/in/nicolas-f-savino-6887182a9/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
                         <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
                         </svg>
-                        <span class="social-label">LinkedIn</span>
                     </a>
 
-                    <a href="https://share.streamlit.io/user/nicolassavino" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://share.streamlit.io/user/nicolassavino" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Streamlit">
                         <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
                         </svg>
-                        <span class="social-label">Streamlit</span>
                     </a>
+
+                    <div class="social-link email-dropdown" tabindex="0" role="button" aria-label="Email">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <div class="email-dropdown-content">
+                            <a href="mailto:nsavino5@fordham.edu">nsavino5@fordham.edu</a>
+                            <a href="mailto:nicolassavino3@gmail.com">nicolassavino3@gmail.com</a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Right Side - Blog Announcement -->
                 <div class="blog-announcement">
                     <p class="blog-text">My New Blog is Live! Please Feel Free to Check Out My Writings:</p>
                     <a href="https://substack.com/@nicolasfsavino" target="_blank" rel="noopener noreferrer" class="blog-button">BLOG</a>
-                </div>
-            </div>
-
-            <!-- Contact Information -->
-            <div class="contact-section">
-                <h3 class="contact-title">Feel Free to Contact Me</h3>
-                <div class="contact-emails">
-                    <a href="mailto:nsavino5@fordham.edu" class="email-link">nsavino5@fordham.edu</a>
-                    <a href="mailto:nicolassavino3@gmail.com" class="email-link">nicolassavino3@gmail.com</a>
                 </div>
             </div>
 
