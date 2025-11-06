@@ -1,6 +1,4 @@
-// ===================================
 // Smooth Scroll Navigation
-// ===================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -24,9 +22,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===================================
 // Active Navigation Link on Scroll
-// ===================================
 
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -61,9 +57,7 @@ function updateActiveLink() {
 
 window.addEventListener('scroll', updateActiveLink);
 
-// ===================================
 // Fade-in Animation on Scroll
-// ===================================
 
 const observerOptions = {
     threshold: 0.2,
@@ -137,9 +131,7 @@ if (contactSection) {
     fadeInObserver.observe(contactSection);
 }
 
-// ===================================
 // Accordion Functionality for Research Projects
-// ===================================
 
 const accordionCards = document.querySelectorAll('.accordion-card');
 
@@ -180,17 +172,13 @@ accordionCards.forEach(card => {
     });
 });
 
-// ===================================
 // Initialize on Load
-// ===================================
 
 window.addEventListener('load', () => {
     updateActiveLink();
 });
 
-// ===================================
 // Projects Click-to-Reveal Functionality
-// ===================================
 
 const projectLogoItemsClick = document.querySelectorAll('.project-logo-item');
 const projectDetailsPanel = document.getElementById('projectDetailsPanel');
@@ -248,9 +236,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// ===================================
 // Keyboard Accessibility
-// ===================================
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {

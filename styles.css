@@ -1,6 +1,4 @@
-/* ===================================
-   CSS Reset & Base Styles
-   =================================== */
+/* CSS Reset & Base Styles */
 
 * {
     margin: 0;
@@ -40,9 +38,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===================================
-   Custom Scrollbar
-   =================================== */
+/* Custom Scrollbar */
 
 /* Firefox */
 * {
@@ -75,9 +71,7 @@ body {
     background: rgba(186, 147, 216, 0.9);
 }
 
-/* ===================================
-   Navigation
-   =================================== */
+/* Navigation */
 
 .nav {
     position: fixed;
@@ -125,9 +119,7 @@ body {
     width: 100%;
 }
 
-/* ===================================
-   Hero Section
-   =================================== */
+/* Hero Section */
 
 .hero {
     position: relative;
@@ -228,79 +220,77 @@ body {
 }
 
 /* Individual snowflake variations */
-.snowflake:nth-child(1) {
+.snowflake:nth-child(2) {
     left: 5%;
     animation-duration: 12s;
     animation-delay: -8s;
     font-size: 0.8em;
 }
 
-.snowflake:nth-child(2) {
+.snowflake:nth-child(3) {
     left: 15%;
     animation-duration: 15s;
     animation-delay: -3s;
     font-size: 1em;
 }
 
-.snowflake:nth-child(3) {
+.snowflake:nth-child(4) {
     left: 25%;
     animation-duration: 18s;
     animation-delay: -12s;
     font-size: 0.6em;
 }
 
-.snowflake:nth-child(4) {
+.snowflake:nth-child(5) {
     left: 35%;
     animation-duration: 14s;
     animation-delay: -6s;
     font-size: 0.9em;
 }
 
-.snowflake:nth-child(5) {
+.snowflake:nth-child(6) {
     left: 45%;
     animation-duration: 16s;
     animation-delay: -10s;
     font-size: 0.7em;
 }
 
-.snowflake:nth-child(6) {
+.snowflake:nth-child(7) {
     left: 55%;
     animation-duration: 13s;
     animation-delay: -4s;
     font-size: 0.85em;
 }
 
-.snowflake:nth-child(7) {
+.snowflake:nth-child(8) {
     left: 65%;
     animation-duration: 17s;
     animation-delay: -14s;
     font-size: 0.75em;
 }
 
-.snowflake:nth-child(8) {
+.snowflake:nth-child(9) {
     left: 75%;
     animation-duration: 19s;
     animation-delay: -7s;
     font-size: 0.65em;
 }
 
-.snowflake:nth-child(9) {
+.snowflake:nth-child(10) {
     left: 85%;
     animation-duration: 14s;
     animation-delay: -11s;
     font-size: 0.8em;
 }
 
-.snowflake:nth-child(10) {
+.snowflake:nth-child(11) {
     left: 95%;
     animation-duration: 16s;
     animation-delay: -5s;
     font-size: 0.7em;
 }
 
-/* ===================================
-   Sections
-   =================================== */
+/* Sections */
 
 .section {
     min-height: 100vh;
@@ -333,9 +323,7 @@ body {
     color: #f0f0f0;
 }
 
-/* ===================================
-   About Me Section
-   =================================== */
+/* About Me Section */
 
 #about {
     position: relative;
@@ -461,9 +449,7 @@ body {
     background: rgba(186, 147, 216, 0.05);
 }
 
-/* ===================================
-   Skills Section
-   =================================== */
+/* Skills Section */
 
 #skills {
     min-height: 100vh;
@@ -609,9 +595,7 @@ body {
     font-style: italic;
 }
 
-/* ===================================
-   Projects Section
-   =================================== */
+/* Projects Section */
 
 #projects {
     min-height: 100vh;
@@ -827,9 +811,7 @@ body {
     margin-bottom: var(--space-md);
 }
 
-/* ===================================
-   Research Section
-   =================================== */
+/* Research Section */
 
 #research {
     min-height: auto;
@@ -968,6 +950,17 @@ body {
     margin-bottom: var(--space-sm);
     letter-spacing: 0.05em;
     text-transform: uppercase;
+}
+
+.research-description {
+    font-size: 1.0625rem;
+    color: var(--color-body-text);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+    padding: var(--space-md);
+    background: rgba(186, 147, 216, 0.08);
+    border-radius: 6px;
+    border-left: 3px solid rgba(186, 147, 216, 0.4);
 }
 
 .research-list {
@@ -1232,9 +1225,7 @@ body {
     color: #e8e6f0;
 }
 
-/* ===================================
-   Socials Section
-   =================================== */
+/* Socials Section */
 
 #socials {
     min-height: 100vh;
@@ -1441,9 +1432,7 @@ body {
 }
 
 
-/* ===================================
-   Animations
-   =================================== */
+/* Animations */
 
 @keyframes fadeInUp {
     from {
@@ -1456,9 +1445,7 @@ body {
     }
 }
 
-/* ===================================
-   Responsive Design
-   =================================== */
+/* Responsive Design */
 
 @media (max-width: 768px) {
     .nav {
@@ -1768,9 +1755,7 @@ body {
     }
 }
 
-/* ===================================
-   Accessibility
-   =================================== */
+/* Accessibility */
 
 @media (prefers-reduced-motion: reduce) {
     *,
