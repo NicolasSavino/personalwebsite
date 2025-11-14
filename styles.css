@@ -13,6 +13,9 @@
     --color-text: #f0f0f0;
     --color-body-text: #f0eef8;
     --color-dark-overlay: rgba(0, 0, 0, 0.35);
+    --color-accent: #ba93d8;
+    --color-accent-light: #dda6dc;
+    --color-accent-glow: rgba(186, 147, 216, 0.4);
 
     /* Typography */
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -180,19 +183,22 @@ body {
     font-weight: 400;
     color: var(--color-white);
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(186, 147, 216, 0.1));
     transition: all 0.3s ease;
     letter-spacing: 0.05em;
     opacity: 0;
     animation: fadeInUp 1.2s ease forwards;
     animation-delay: 0.8s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .hero-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(186, 147, 216, 0.3));
+    border-color: rgba(186, 147, 216, 0.8);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(186, 147, 216, 0.4);
 }
 
 /* Snowflakes Animation */
@@ -389,13 +395,15 @@ body {
     border-radius: 50%;
     object-fit: cover;
     aspect-ratio: 1 / 1;
-    border: 3px solid rgba(186, 147, 216, 0.3);
-    transition: all 0.3s ease;
+    border: 4px solid rgba(186, 147, 216, 0.4);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 32px rgba(186, 147, 216, 0.3);
 }
 
 .about-image:hover {
-    border-color: rgba(186, 147, 216, 0.5);
-    transform: scale(1.02);
+    border-color: rgba(186, 147, 216, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(186, 147, 216, 0.5);
 }
 
 .about-text-container {
@@ -499,12 +507,13 @@ body {
 
 .skill-accordion-card {
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid rgba(186, 147, 216, 0.2);
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(40px);
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .skill-accordion-card.visible {
@@ -513,12 +522,15 @@ body {
 }
 
 .skill-accordion-card:hover {
-    border-color: rgba(186, 147, 216, 0.4);
+    border-color: rgba(186, 147, 216, 0.5);
+    box-shadow: 0 8px 30px rgba(186, 147, 216, 0.2);
+    transform: translateY(-2px);
 }
 
 .skill-accordion-card.active {
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(186, 147, 216, 0.5);
+    border-color: rgba(186, 147, 216, 0.6);
+    box-shadow: 0 8px 32px rgba(186, 147, 216, 0.3);
 }
 
 .skill-accordion-title {
@@ -658,26 +670,29 @@ body {
 .project-logo-container {
     width: 100%;
     aspect-ratio: 1;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(186, 147, 216, 0.2);
-    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(186, 147, 216, 0.05));
+    border: 2px solid rgba(186, 147, 216, 0.2);
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-logo-container:hover {
-    border-color: rgba(186, 147, 216, 0.5);
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-4px);
+    border-color: rgba(186, 147, 216, 0.6);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(186, 147, 216, 0.15));
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(186, 147, 216, 0.3);
 }
 
 .project-logo-item.active .project-logo-container {
-    border-color: rgba(186, 147, 216, 0.6);
-    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(186, 147, 216, 0.7);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(186, 147, 216, 0.2));
+    box-shadow: 0 12px 40px rgba(186, 147, 216, 0.4);
 }
 
 .project-logo-image {
@@ -707,21 +722,23 @@ body {
 .project-details-panel {
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(186, 147, 216, 0.3);
-    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(186, 147, 216, 0.08));
+    border: 2px solid rgba(186, 147, 216, 0.4);
+    border-radius: 16px;
     padding: var(--space-xl);
     position: relative;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: all 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .project-details-panel.active {
     max-height: 600px;
     opacity: 1;
     margin-top: var(--space-xl);
+    box-shadow: 0 12px 48px rgba(186, 147, 216, 0.3);
 }
 
 .project-close-btn {
@@ -782,18 +799,20 @@ body {
     color: #ffffff;
     text-decoration: none;
     text-align: center;
-    background: rgba(186, 147, 216, 0.25);
-    border: 2px solid rgba(186, 147, 216, 0.5);
-    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(186, 147, 216, 0.3), rgba(186, 147, 216, 0.15));
+    border: 2px solid rgba(186, 147, 216, 0.6);
+    border-radius: 10px;
     letter-spacing: 0.05em;
     transition: all 0.3s ease;
     margin-top: var(--space-md);
+    box-shadow: 0 4px 15px rgba(186, 147, 216, 0.2);
 }
 
 .project-details-button:hover {
-    background: rgba(186, 147, 216, 0.35);
-    border-color: rgba(186, 147, 216, 0.7);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(186, 147, 216, 0.5), rgba(186, 147, 216, 0.3));
+    border-color: rgba(186, 147, 216, 0.9);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 25px rgba(186, 147, 216, 0.4);
 }
 
 /* Project Tag in Details */
@@ -860,13 +879,14 @@ body {
 }
 
 .interests-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(186, 147, 216, 0.05));
+    border-radius: 12px;
     padding: var(--space-lg);
-    border: 1px solid rgba(186, 147, 216, 0.2);
+    border: 2px solid rgba(186, 147, 216, 0.3);
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(40px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .interests-card.visible {
@@ -875,7 +895,9 @@ body {
 }
 
 .interests-card:hover {
-    border-color: rgba(186, 147, 216, 0.4);
+    border-color: rgba(186, 147, 216, 0.5);
+    box-shadow: 0 8px 30px rgba(186, 147, 216, 0.25);
+    transform: translateY(-4px);
 }
 
 .interests-title {
@@ -897,13 +919,14 @@ body {
 /* Research Block - For main positions */
 .research-block {
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: var(--space-lg);
-    border: 1px solid rgba(186, 147, 216, 0.2);
+    border: 1px solid rgba(186, 147, 216, 0.3);
     margin-bottom: var(--space-lg);
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(40px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .research-block.visible {
@@ -912,7 +935,9 @@ body {
 }
 
 .research-block:hover {
-    border-color: rgba(186, 147, 216, 0.4);
+    border-color: rgba(186, 147, 216, 0.5);
+    box-shadow: 0 8px 30px rgba(186, 147, 216, 0.2);
+    transform: translateY(-2px);
 }
 
 .research-header {
@@ -1036,17 +1061,23 @@ body {
 
 .research-project-card {
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    border: 1px solid rgba(186, 147, 216, 0.2);
+    border-radius: 12px;
+    border: 1px solid rgba(186, 147, 216, 0.3);
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(40px);
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .research-project-card.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.research-project-card:hover {
+    box-shadow: 0 8px 30px rgba(186, 147, 216, 0.2);
+    transform: translateY(-2px);
 }
 
 /* Accordion Styles */
@@ -1302,23 +1333,26 @@ body {
     justify-content: center;
     width: 80px;
     height: 80px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(186, 147, 216, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(186, 147, 216, 0.08));
+    border: 2px solid rgba(186, 147, 216, 0.3);
     border-radius: 50%;
     text-decoration: none;
     color: var(--color-body-text);
     transition: all 0.3s ease;
     position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .social-link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(186, 147, 216, 0.5);
-    transform: translateY(-4px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(186, 147, 216, 0.25));
+    border-color: rgba(186, 147, 216, 0.7);
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(186, 147, 216, 0.4);
 }
 
 .social-link:hover .social-icon {
-    color: #ba93d8;
+    color: #dda6dc;
+    transform: scale(1.1);
 }
 
 .social-icon {
@@ -1387,19 +1421,25 @@ body {
     justify-content: center;
     gap: var(--space-lg);
     padding: var(--space-xl);
-    background: rgba(186, 147, 216, 0.1);
-    border: 2px solid rgba(186, 147, 216, 0.3);
-    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(186, 147, 216, 0.15), rgba(186, 147, 216, 0.08));
+    border: 2px solid rgba(186, 147, 216, 0.4);
+    border-radius: 16px;
     text-align: center;
     min-height: 300px;
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: all 0.6s ease;
+    box-shadow: 0 8px 32px rgba(186, 147, 216, 0.2);
 }
 
 .blog-announcement.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.blog-announcement:hover {
+    box-shadow: 0 12px 48px rgba(186, 147, 216, 0.3);
+    transform: translateY(-4px);
 }
 
 .blog-text {
@@ -1418,17 +1458,19 @@ body {
     font-weight: 600;
     color: #ffffff;
     text-decoration: none;
-    background: rgba(186, 147, 216, 0.2);
-    border: 2px solid rgba(186, 147, 216, 0.5);
-    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(186, 147, 216, 0.3), rgba(186, 147, 216, 0.15));
+    border: 2px solid rgba(186, 147, 216, 0.6);
+    border-radius: 12px;
     letter-spacing: 0.1em;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(186, 147, 216, 0.2);
 }
 
 .blog-button:hover {
-    background: rgba(186, 147, 216, 0.35);
-    border-color: rgba(186, 147, 216, 0.7);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(186, 147, 216, 0.5), rgba(186, 147, 216, 0.3));
+    border-color: rgba(186, 147, 216, 0.9);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(186, 147, 216, 0.5);
 }
 
 
