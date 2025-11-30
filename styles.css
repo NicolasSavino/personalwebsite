@@ -231,6 +231,8 @@ body {
         0 8px 0 var(--color-pixel-border),
         0 8px 20px rgba(0, 0, 0, 0.5);
     text-shadow: 2px 2px 0 var(--color-pixel-border);
+    max-width: 100%;
+    width: 100%;
 }
 
 .hero-quote cite {
@@ -253,17 +255,16 @@ body {
     border-right: 3px solid var(--color-ice-blue);
     white-space: nowrap;
     animation:
-        typing 1.5s steps(90, end) forwards,
+        typing 2s steps(85, end) forwards,
         blink-caret 0.5s step-end infinite;
-    width: 0;
 }
 
 @keyframes typing {
-    from {
+    0% {
         width: 0;
     }
-    to {
-        width: 100%;
+    100% {
+        width: 90ch;
         border-right-color: transparent;
     }
 }
