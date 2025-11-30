@@ -44,7 +44,7 @@ html {
 body {
     font-family: var(--font-main);
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--color-text);
     background-color: var(--color-dark-bg);
     background-image:
@@ -58,6 +58,7 @@ body {
     image-rendering: pixelated;
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Custom Scrollbar */
@@ -241,8 +242,8 @@ body {
     color: var(--color-ice-blue);
     text-shadow: 1px 1px 0 var(--color-pixel-border);
     opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: 3s;
+    animation: fadeIn 0.3s ease forwards;
+    animation-delay: 2.3s;
 }
 
 /* Pokemon-style Typewriter Animation */
@@ -252,17 +253,18 @@ body {
     border-right: 3px solid var(--color-ice-blue);
     white-space: nowrap;
     animation:
-        typing 2.5s steps(80, end) forwards,
+        typing 2s steps(90, end) forwards,
         blink-caret 0.5s step-end infinite;
+    width: 0;
+    max-width: fit-content;
 }
 
 @keyframes typing {
     from {
         width: 0;
-        border-right-color: var(--color-ice-blue);
     }
     to {
-        width: 100%;
+        width: 54ch;
         border-right-color: transparent;
     }
 }
@@ -290,8 +292,8 @@ body {
     transition: all 0.1s ease;
     letter-spacing: 0.1em;
     opacity: 0;
-    animation: fadeInUp 1.2s ease forwards, buttonBlink 1s ease-in-out infinite 4s;
-    animation-delay: 3.3s;
+    animation: fadeInUp 0.8s ease forwards, buttonBlink 1s ease-in-out infinite 3.2s;
+    animation-delay: 2.6s;
     box-shadow:
         inset -3px -3px 0 rgba(0, 0, 0, 0.4),
         inset 3px 3px 0 rgba(255, 255, 255, 0.3),
@@ -527,7 +529,7 @@ body {
 #about {
     position: relative;
     padding: clamp(4rem, 10vh, 6rem) var(--space-md);
-    background: linear-gradient(180deg, var(--color-dark-bg) 0%, #2C5F8D 100%);
+    background: linear-gradient(180deg, var(--color-night-sky) 0%, var(--color-deep-blue) 50%, #2C5F8D 100%);
     background-attachment: fixed;
 }
 
@@ -692,6 +694,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: relative;
 }
 
 #skills::before {
@@ -872,10 +875,7 @@ body {
     min-height: 100vh;
     position: relative;
     padding: clamp(4rem, 10vh, 6rem) var(--space-md);
-    background-image: url('winter8bit.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(180deg, var(--color-deep-blue) 0%, var(--color-night-sky) 50%, #1A2332 100%);
     background-attachment: fixed;
 }
 
@@ -1664,10 +1664,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('winter8bit.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(180deg, #1A2332 0%, var(--color-night-sky) 50%, var(--color-deep-blue) 100%);
     background-attachment: fixed;
 }
 
