@@ -82,35 +82,35 @@ if (aboutGrid) {
 const skillAccordionCards = document.querySelectorAll('.skill-accordion-card');
 skillAccordionCards.forEach((card, index) => {
     // Add staggered delay for each card
-    card.style.transitionDelay = `${index * 0.15}s`;
+    card.style.transitionDelay = `${index * 0.05}s`;
     fadeInObserver.observe(card);
 });
 
 // Observe project logo items for staggered fade-in animation
 const projectLogoItems = document.querySelectorAll('.project-logo-item');
 projectLogoItems.forEach((item, index) => {
-    item.style.transitionDelay = `${index * 0.15}s`;
+    item.style.transitionDelay = `${index * 0.05}s`;
     fadeInObserver.observe(item);
 });
 
 // Observe research interests cards for fade-in animation
 const interestsCards = document.querySelectorAll('.interests-card');
 interestsCards.forEach((card, index) => {
-    card.style.transitionDelay = `${index * 0.2}s`;
+    card.style.transitionDelay = `${index * 0.08}s`;
     fadeInObserver.observe(card);
 });
 
 // Observe research blocks for fade-in animation
 const researchBlocks = document.querySelectorAll('.research-block');
 researchBlocks.forEach((block, index) => {
-    block.style.transitionDelay = `${index * 0.15}s`;
+    block.style.transitionDelay = `${index * 0.05}s`;
     fadeInObserver.observe(block);
 });
 
 // Observe research project cards for staggered fade-in animation
 const researchProjectCards = document.querySelectorAll('.research-project-card');
 researchProjectCards.forEach((card, index) => {
-    card.style.transitionDelay = `${index * 0.1}s`;
+    card.style.transitionDelay = `${index * 0.04}s`;
     fadeInObserver.observe(card);
 });
 
