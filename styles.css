@@ -202,10 +202,10 @@ body {
 }
 
 .hero-quote {
-    font-family: var(--font-main);
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-family: var(--font-pixel);
+    font-size: clamp(0.7rem, 1.6vw, 1rem);
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 2.2;
     color: var(--color-white);
     margin-bottom: 0;
     opacity: 0;
@@ -221,8 +221,9 @@ body {
 
 .hero-quote cite {
     display: block;
+    font-family: var(--font-pixel);
     margin-top: var(--space-md);
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-size: clamp(0.5rem, 1vw, 0.7rem);
     font-weight: 400;
     font-style: normal;
     color: #ffb7c5;
