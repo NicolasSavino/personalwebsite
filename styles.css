@@ -44,6 +44,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -56,35 +57,36 @@ body {
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
 
-* {
+html {
     scrollbar-width: thin;
     scrollbar-color: #f5c842 #0a1628;
 }
 
-*::-webkit-scrollbar {
-    width: 10px;
+html::-webkit-scrollbar {
+    width: 8px;
 }
 
-*::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
     background: #0a1628;
 }
 
-*::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
     background: #c9a228;
     border-radius: 999px;
     border: 2px solid #0a1628;
     transition: background 0.3s ease;
 }
 
-*::-webkit-scrollbar-thumb:hover {
+html::-webkit-scrollbar-thumb:hover {
     background: #f5c842;
 }
 
-*::-webkit-scrollbar-thumb:active {
+html::-webkit-scrollbar-thumb:active {
     background: #ffe47a;
 }
 
@@ -215,9 +217,9 @@ body {
 
 .hero-quote {
     font-family: var(--font-pixel);
-    font-size: clamp(0.65rem, 1.5vw, 0.95rem);
+    font-size: clamp(0.85rem, 2vw, 1.25rem);
     font-weight: 400;
-    line-height: 2.6;
+    line-height: 2.4;
     color: var(--color-starlight);
     margin-bottom: 0;
     opacity: 0;
@@ -292,7 +294,7 @@ body {
     margin-top: var(--space-md);
     padding-top: var(--space-sm);
     border-top: 1px solid rgba(245, 200, 66, 0.2);
-    font-size: clamp(0.45rem, 0.9vw, 0.65rem);
+    font-size: clamp(0.6rem, 1.2vw, 0.85rem);
     font-weight: 400;
     font-style: normal;
     color: var(--color-star-gold);
@@ -1825,8 +1827,29 @@ body {
         padding: 0.5rem 0.75rem;
     }
 
+    /* Disable fixed background on mobile (broken on iOS Safari) */
+    .hero,
+    #about,
+    #skills,
+    #projects,
+    #research,
+    #socials {
+        background-attachment: scroll;
+    }
+
+    .hero {
+        padding: 5rem var(--space-md) var(--space-xl);
+        min-height: 100svh;
+    }
+
     .hero-quote {
-        font-size: clamp(1.25rem, 5vw, 1.75rem);
+        font-size: clamp(0.7rem, 3.5vw, 1rem);
+        line-height: 2.4;
+        padding: var(--space-md) var(--space-md);
+    }
+
+    .hero-quote cite {
+        font-size: clamp(0.5rem, 2.5vw, 0.7rem);
     }
 
     .hero-button {
@@ -1849,11 +1872,12 @@ body {
 
     #about .section-title {
         margin-bottom: var(--space-lg);
+        font-size: clamp(0.85rem, 3.5vw, 1.1rem);
     }
 
     .about-grid {
         grid-template-columns: 1fr;
-        gap: var(--space-xl);
+        gap: var(--space-lg);
         align-items: center;
     }
 
@@ -1862,7 +1886,7 @@ body {
     }
 
     .about-image {
-        max-width: 280px;
+        max-width: 260px;
     }
 
     .about-text-container {
@@ -1871,13 +1895,13 @@ body {
     }
 
     .about-education {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 
     .about-intro,
     .about-hobbies,
     .about-current {
-        font-size: 1.0625rem;
+        font-size: 1rem;
         line-height: 1.85;
     }
 
@@ -2073,6 +2097,7 @@ body {
         padding: 0;
         gap: var(--space-md);
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .social-link {
@@ -2087,8 +2112,24 @@ body {
 
     .email-dropdown-content {
         min-width: 240px;
+        left: auto;
+        right: 0;
+        transform: none;
     }
 
+    .email-dropdown:hover .email-dropdown-content,
+    .email-dropdown:focus .email-dropdown-content {
+        transform: translateY(4px);
+    }
+
+    /* Scrollbar hidden on mobile */
+    html {
+        scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2098,28 +2139,56 @@ body {
 
     .nav-menu {
         gap: 0.375rem;
-        justify-content: space-evenly;
+        justify-content: center;
         width: 100%;
+        flex-wrap: wrap;
     }
 
     .nav-link {
-        font-size: 0.45rem;
-        padding: 0.4rem 0.6rem;
+        font-size: 0.5rem;
+        padding: 0.45rem 0.7rem;
         letter-spacing: 0.02em;
     }
 
     .hero {
-        background-attachment: scroll;
-        padding: var(--space-md);
+        padding: 5rem var(--space-sm) var(--space-xl);
+    }
+
+    .hero-content {
+        padding: var(--space-sm);
     }
 
     .hero-quote {
-        padding: var(--space-md);
-        margin-bottom: var(--space-lg);
+        font-size: clamp(0.6rem, 3vw, 0.85rem);
+        padding: var(--space-sm) var(--space-md);
+        line-height: 2.4;
     }
 
     .section {
         padding: var(--space-md) var(--space-sm);
+    }
+
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    .about-grid {
+        gap: var(--space-md);
+    }
+
+    .about-image {
+        max-width: 220px;
+    }
+
+    .socials-icons {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-link {
+        width: 62px;
+        height: 62px;
     }
 }
 
@@ -2131,26 +2200,17 @@ body {
 
     .nav-menu {
         gap: 0.3rem;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .nav-link {
-        font-size: 0.45rem;
+        font-size: 0.48rem;
         padding: 0.45rem 0.65rem;
     }
 
     .about-grid {
         gap: var(--space-lg);
-    }
-
-    .socials-icons {
-        gap: 0.75rem;
-        flex-wrap: wrap;
-    }
-
-    .social-link {
-        width: 65px;
-        height: 65px;
     }
 
     .projects-logo-grid {
