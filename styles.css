@@ -170,7 +170,7 @@ html::-webkit-scrollbar-thumb:active {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     overflow: hidden;
     padding-bottom: var(--space-xl);
 }
@@ -217,7 +217,7 @@ html::-webkit-scrollbar-thumb:active {
 
 .hero-quote {
     font-family: var(--font-pixel);
-    font-size: clamp(0.85rem, 2vw, 1.25rem);
+    font-size: clamp(1.1rem, 2.8vw, 1.8rem);
     font-weight: 400;
     line-height: 2.4;
     color: var(--color-starlight);
@@ -294,7 +294,7 @@ html::-webkit-scrollbar-thumb:active {
     margin-top: var(--space-md);
     padding-top: var(--space-sm);
     border-top: 1px solid rgba(245, 200, 66, 0.2);
-    font-size: clamp(0.6rem, 1.2vw, 0.85rem);
+    font-size: clamp(0.7rem, 1.4vw, 1rem);
     font-weight: 400;
     font-style: normal;
     color: var(--color-star-gold);
@@ -458,7 +458,7 @@ html::-webkit-scrollbar-thumb:active {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 #about::before {
@@ -640,7 +640,7 @@ html::-webkit-scrollbar-thumb:active {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 #skills::before {
@@ -833,7 +833,7 @@ html::-webkit-scrollbar-thumb:active {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 #projects::before {
@@ -1109,7 +1109,7 @@ html::-webkit-scrollbar-thumb:active {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 #research::before {
@@ -1641,7 +1641,7 @@ html::-webkit-scrollbar-thumb:active {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 #socials::before {
@@ -1843,13 +1843,13 @@ html::-webkit-scrollbar-thumb:active {
     }
 
     .hero-quote {
-        font-size: clamp(0.7rem, 3.5vw, 1rem);
-        line-height: 2.4;
+        font-size: clamp(0.8rem, 4vw, 1.2rem);
+        line-height: 2.3;
         padding: var(--space-md) var(--space-md);
     }
 
     .hero-quote cite {
-        font-size: clamp(0.5rem, 2.5vw, 0.7rem);
+        font-size: clamp(0.55rem, 2.8vw, 0.8rem);
     }
 
     .hero-button {
@@ -2159,9 +2159,9 @@ html::-webkit-scrollbar-thumb:active {
     }
 
     .hero-quote {
-        font-size: clamp(0.6rem, 3vw, 0.85rem);
+        font-size: clamp(0.7rem, 3.5vw, 1rem);
         padding: var(--space-sm) var(--space-md);
-        line-height: 2.4;
+        line-height: 2.3;
     }
 
     .section {
